@@ -1,0 +1,6 @@
+root = "./"
+luaservice = root.."service/?.lua;"..root.."examples/official/?.lua;"..root.."examples/official/001_test/?.lua;"..root.."examples/official/002_service/?.lua;"..root.."examples/official/003_testwakeup/?.lua;"..root.."examples/official/004_message/?.lua;"..root.."examples/official/005_session/?.lua;"..root.."examples/official/006_proxy/?.lua;"..root.."examples/official/007_harbor/?.lua;"..root.."examples/official/008_multicast/?.lua;"..root.."examples/official/009_socket/?.lua;"..root.."examples/official/010_socketchannel/?.lua;"..root.."examples/official/011_dns/?.lua;"..root.."examples/official/012_gate/?.lua;"..root.."examples/official/013_login/?.lua;"..root.."examples/official/014_msgserver/?.lua;"..root.."examples/official/015_mymsgserver/?.lua;"..root.."examples/official/016_proto/?.lua;"
+lualoader = root .. "lualib/loader.lua"
+lua_path = root.."lualib/?.lua;"..root.."lualib/?/init.lua;"..root.."lualib/share/lua/5.1/?.lua;"
+lua_cpath = root .. "luaclib/?.so"
+snax = root.."examples/official/?.lua;"

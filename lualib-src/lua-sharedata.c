@@ -306,6 +306,7 @@ convtable(lua_State *L) {
 		for (i=0;i<sizehash;i++) {
 			tbl->hash[i].valuetype = VALUETYPE_NIL;
 			tbl->hash[i].nocolliding = 0;
+			tbl->hash[i].next = -1;
 		}
 		tbl->sizehash = sizehash;
 
@@ -539,7 +540,9 @@ lindexconf(lua_State *L) {
 	int keytype;
 	size_t sz = 0;
 	const char * str = NULL;
-	if (kt == LUA_TNUMBER) {
+	if (kt == LUA_TNIL) {
+		return 0;
+	} else if (kt == LUA_TNUMBER) {
 		if (!lua_isinteger(L, 2)) {
 			return luaL_error(L, "Invalid key %f", lua_tonumber(L, 2));
 		}
